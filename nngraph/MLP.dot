@@ -1,0 +1,41 @@
+digraph G {
+	graph [bb="0,0,257.39,841.85"];
+	node [label="\N",
+		shape=oval
+	];
+	n1	 [height=1.6303,
+		label="Node1\ninput = {Tensor[10]}\lmodule = nn.Linear(10 -> 1)\lreverseMap = {}\lgradOutput = {Tensor[1]}",
+		pos="128.69,190.86",
+		tooltip="[nngraph.lua]:11_",
+		width=3.457];
+	n2	 [height=1.3356,
+		label="Node2\ninput = {Tensor[1]}\lreverseMap = {}\lgradOutput = {Tensor[1]}",
+		pos="128.69,48.083",
+		tooltip="[[C]]:-1_",
+		width=3.1623];
+	n1 -> n2	 [pos="e,128.69,96.295 128.69,131.79 128.69,123.39 128.69,114.74 128.69,106.36"];
+	n3	 [height=1.6303,
+		label="Node3\ninput = {Tensor[10]}\lmodule = nn.Tanh\lreverseMap = {}\lgradOutput = {Tensor[10]}",
+		pos="128.69,344.24",
+		tooltip="[nngraph.lua]:10_",
+		width=3.2802];
+	n3 -> n1	 [pos="e,128.69,249.8 128.69,285.14 128.69,276.9 128.69,268.37 128.69,259.96"];
+	n4	 [height=1.6303,
+		label="Node4\ninput = {Tensor[20]}\lmodule = nn.Linear(20 -> 10)\lreverseMap = {}\lgradOutput = {Tensor[10]}",
+		pos="128.69,497.62",
+		tooltip="[nngraph.lua]:10_",
+		width=3.5748];
+	n4 -> n3	 [pos="e,128.69,403.18 128.69,438.52 128.69,430.28 128.69,421.75 128.69,413.34"];
+	n5	 [height=1.6303,
+		label="Node5\ninput = {Tensor[20]}\lmodule = nn.Identity\lreverseMap = {}\lgradOutput = {Tensor[20]}",
+		pos="128.69,651",
+		tooltip="[nngraph.lua]:6_",
+		width=3.2802];
+	n5 -> n4	 [pos="e,128.69,556.55 128.69,591.9 128.69,583.66 128.69,575.13 128.69,566.72"];
+	n6	 [height=1.3356,
+		label="Node6\ninput = {Tensor[20]}\lreverseMap = {}\lgradOutput = {Tensor[20]}",
+		pos="128.69,793.77",
+		tooltip="[[C]]:-1_",
+		width=3.2802];
+	n6 -> n5	 [pos="e,128.69,710.14 128.69,745.5 128.69,737.35 128.69,728.73 128.69,720.16"];
+}

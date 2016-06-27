@@ -1,0 +1,17 @@
+require 'string'
+
+function read_file(file)
+   --[[
+      Given a tab-deliminated file 'file'
+      Returns the data of 'file' converted into a table of numbers
+      Note that the file cannot contain non-numeric values
+   ]]
+   local temp = {}
+   local output = {}
+   
+   for line in io.lines(file) do
+      table.insert(temp, line)
+   end
+
+   
+end
